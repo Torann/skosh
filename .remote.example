@@ -1,0 +1,13 @@
+# FTP Settings
+ftp:
+  host: yoursite
+  user: username
+  pass: password
+  remote_dir: public_html
+
+# SSH Settings
+ssh:
+  host: yoursite
+  port: 4668
+  user: username
+  remote_dir: public_html

@@ -9,6 +9,8 @@
   },
   "scripts": {
     "post-create-project-cmd": [
+      "php -r \"copy('.env.example', '.env.yml');\"",
+      "php -r \"copy('.remote.example', '.remote.yml');\"",
       "php skosh init"
     ]
   }

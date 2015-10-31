@@ -1,6 +1,5 @@
 .DS_Store
 .idea
-/public
 /vendor
 node_modules
 .remote.yml

@@ -1,0 +1,14 @@
+# Site configuration
+timezone: America/New_York
+title: My New Web
+url: http://localhost:8000
+target: /public
+
+# Pagination
+max_per_page: 15
+
+# Files extensions to exclude when copying static files
+exclude: [swp, bak, DS_Store, gitkeep]
+
+# Folders and files to copy
+copy: [favicon.png, skosh.php, skosh]

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+	<channel>
+	  <title>{{ site.title }}</title>
+	  <link>{{ site.url }}</link>
+	  <description>Describes the channel</description>
+{% for post in site.posts %}
+	  <item>
+		<title>{{ post.title }}</title>
+		<link>{{ site.url }}{{ post.url }}</link>
+		<description>{{ post.excerpt }}</description>
+		<pubDate>{{ page.date|date("D, m M y") }}</pubDate>
+	  </item>
+{% endfor %}
+	</channel>
+</rss>

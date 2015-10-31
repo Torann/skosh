@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+/public
+/vendor
+node_modules
+.remote.yml
+.remote_*.yml
+.env.yml
+.env_*.yml
+rev-manifest.json
+downloads.json

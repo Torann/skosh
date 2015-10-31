@@ -1,0 +1,15 @@
+---
+title: About
+template: default.twig
+---
+
+h1. Textile Demo
+
+Did you know that Skosh can render "textile":http://en.wikipedia.org/wiki/Textile_(markup_language)?
+
+table.
+|_. ID |_. Name |_. Age |_. Sex |
+| 1   | Bill    | 36   | Male     |
+| 2   | Martha    | 24   | Female     |
+| 3   | Sally    | 27   | Female     |
+| 4   | Max    | 35   | Male     |

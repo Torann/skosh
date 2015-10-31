@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+define('BASE_PATH', __DIR__ . '/');
+
+if (file_exists(BASE_PATH . 'vendor/autoload.php')) {
+    require BASE_PATH . 'vendor/autoload.php';
+} else {
+    die('Error: Missing vendor/autoload.php. Run composer install.' . "\n");
+}
+
+use Skosh\Console\Application;
+
+$application = new Application;
+$application->run();

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{{ page.title }} - {{ site.title }}{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link rel="alternate" type="application/rss+xml" title="RSS 2.0 feed" href="{{ site.url }}/rss.xml" />
+        <link rel="icon" type="image/x-icon" href="/favicon.png" />
+
+        <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <!-- styles -->
+        <link rel="stylesheet" href="{{ asset('stylesheets/bootstrap.css') }}">
+
+        <!-- scripts -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{{ asset('javascripts/app.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+                $('.topbar').dropdown()
+                            .scrollSpy()
+                $('.tabs').tabs()
+                $("a[rel=twipsy]").twipsy({
+                    live: true
+                })
+                $("a[rel=popover]").popover({
+                }).click(function(e) {
+                    e.preventDefault()
+                })
+            });
+        </script>
+    </head>
+    <body>
+        {% include 'topbar.twig' %}
+
+        <div class="container">
+
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            {% include 'footer.twig' %}
+
+        </div>
+    </body>
+</html>
+

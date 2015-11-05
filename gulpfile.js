@@ -104,9 +104,9 @@ gulp.task('compile-images', shell.task([
 // What tasks does running gulp trigger?
 gulp.task('default', ['build']);
 
-gulp.task('serve', ['compile-pages', 'compile-images', 'webserver', 'watch']);
+gulp.task('serve', ['webserver', 'watch']);
 
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['compile-pages', 'compile-images', 'build'], function() {
     gulp.watch('source/assets/stylesheets/**/*.less', ['less']);
     gulp.watch('source/assets/javascripts/**/*.js', ['js']);
     gulp.watch('source/assets/images/*', ['compile-images']);

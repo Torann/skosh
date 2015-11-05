@@ -1,15 +1,37 @@
 #!/usr/bin/env php
 <?php
 
-define('BASE_PATH', __DIR__ . '/');
+define('BASE_PATH', __DIR__);
 
-if (file_exists(BASE_PATH . 'vendor/autoload.php')) {
-    require BASE_PATH . 'vendor/autoload.php';
-} else {
+/*
+|--------------------------------------------------------------------------
+| Register The Auto Loader
+|--------------------------------------------------------------------------
+|
+| Composer provides a convenient, automatically generated class loader
+| for our application. We just need to utilize it! We'll require it
+| into the script here so that we do not have to worry about the
+| loading of any our classes "manually". Feels great to relax.
+|
+*/
+
+if (! file_exists(BASE_PATH . '/vendor/autoload.php')) {
     die('Error: Missing vendor/autoload.php. Run composer install.' . "\n");
 }
 
-use Skosh\Console\Application;
+require BASE_PATH . '/vendor/autoload.php';
 
-$application = new Application;
+/*
+|--------------------------------------------------------------------------
+| Run The Artisan Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application, the current CLI command will be
+| executed in this console and the response sent back to a terminal
+| or another output device for the developers. Here goes nothing!
+|
+*/
+
+$application = new \Skosh\Console\Application;
+
 $application->run();

@@ -5,7 +5,7 @@
   "license": "BSD 2-Clause",
   "type": "project",
   "require": {
-    "torann/skosh-generator": "^0.2.0"
+    "torann/skosh-generator": "0.2.*"
   },
   "scripts": {
     "post-create-project-cmd": [

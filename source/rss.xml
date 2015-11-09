@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<rss version="2.0">
-	<channel>
-	  <title>{{ site.title }}</title>
-	  <link>{{ site.url }}</link>
-	  <description>Describes the channel</description>
-{% for post in site.posts %}
-	  <item>
-		<title>{{ post.title }}</title>
-		<link>{{ site.url }}{{ post.url }}</link>
-		<description>{{ post.excerpt }}</description>
-		<pubDate>{{ page.date|date("D, m M y") }}</pubDate>
-	  </item>
-{% endfor %}
-	</channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    <description>Describes the channel</description>
+    <atom:link href="{{ url('/rss.xml') }}" rel="self" type="application/rss+xml" />
+    {% for post in site.posts %}
+    <item>
+        <title>{{ post.title }}</title>
+        <link>{{ post.url }}</link>
+        <description><![CDATA[{{ post.excerpt }}]]></description>
+        <pubDate>{{ post.date.format('D, d M Y H:i:s T') }}</pubDate>
+        <guid>{{ post.url }}</guid>
+    </item>
+    {% endfor %}
+</channel>
 </rss>

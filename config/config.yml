@@ -3,6 +3,8 @@ timezone: America/New_York
 title: My New Web
 url: http://localhost:8000
 target: /public
+url_trailing_slash: true
+date_format: F m, Y
 
 # Pagination
 max_per_page: 15
@@ -12,3 +14,10 @@ exclude: [swp, bak, DS_Store, gitkeep]
 
 # Folders and files to copy
 copy: [favicon.png, skosh.php, skosh]
+
+# Register twig extensions
+#twig_extensions: []
+
+# Register custom events
+#events:
+#  paginate.before: []

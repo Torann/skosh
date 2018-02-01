@@ -2,7 +2,7 @@
   "name": "torann/skosh",
   "description": "Skosh is a simple static site generator for PHP using Gulp.",
   "keywords": ["static","generator","grunt","jekyll","static site"],
-  "license": "BSD 2-Clause",
+  "license": "BSD-2-Clause",
   "type": "project",
   "require": {
     "torann/skosh-generator": "0.2.*"

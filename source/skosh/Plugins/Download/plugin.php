@@ -11,15 +11,13 @@ class Plugin extends \Skosh\Foundation\Plugin
 
     public function fire($app, array $request)
     {
-        $this->logfile = $app->getRoot().'/downloads.json';
+        $this->logfile = $app->getRoot() . '/downloads.json';
 
-        if (! empty($request['file']))
-        {
+        if (empty($request['file']) === false) {
             $filename = $request['file'];
             $file_path = $this->getConfig('folder') . '/' . $filename;
 
-            if (file_exists($app->getRoot().$file_path))
-            {
+            if (file_exists($app->getRoot() . $file_path)) {
                 $this->updateLog($filename);
                 header("Location: {$file_path}");
             }
@@ -35,12 +33,13 @@ class Plugin extends \Skosh\Foundation\Plugin
     /**
      * Update stats JSON file
      *
-     * @param  string $filename
+     * @param string $filename
+     *
      * @return bool
      */
     protected function updateLog($filename)
     {
-        $entries = array();
+        $entries = [];
 
         // Get contents
         if (file_exists($this->logfile)) {

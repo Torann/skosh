@@ -2,7 +2,7 @@
 
 [![Latest Stable Version](https://poser.pugx.org/torann/skosh-generator/v/stable.png)](https://packagist.org/packages/torann/skosh-generator) [![Total Downloads](https://poser.pugx.org/torann/skosh-generator/downloads.png)](https://packagist.org/packages/torann/skosh-generator)
 
-Skosh takes Markdown and Textile files and combines them with Twig templates to produce a set of static HTML files, while JavaScript and LESS files are managed by Gulp. Supports RSS and sitemaps.
+Skosh takes Markdown and Textile files and combines them with Twig templates to produce a set of static HTML files, while JavaScript and SASS files are managed by Gulp. Supports RSS and sitemaps.
 
 ## Official Documentation
 
